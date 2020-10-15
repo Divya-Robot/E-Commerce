@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="taskmanager.css">
+    <script>
+        $('.mail-choice').change(function() {
+    if($(this).is(":checked")) {
+        $(this).parent().addClass('selected-bg');
+  } else {
+    $(this).parent().removeClass('selected-bg');
+  }
+});
+
+const colorInput = document.getElementById("colorpicker");
+
+colorInput.addEventListener("input", (e) => {
+ document.body.style.setProperty("--button-color", e.target.value);
+});
+
+$('.inbox-calendar').click(function(){
+  $('.calendar-container').toggleClass('calendar-show');
+ $('.inbox-container').toggleClass('hide');
+ $('.mail-detail').toggleClass('hide'); 
+});
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="user-profile-area anim-y-up">
+         <div class="side-wrapper">
+          <div class="user-profile">
+           <a href=""><img src="coderror2.png" alt="" class="user-photo"></a>
+           <div class="user-name">CRUX</div>
+           <div class="user-mail">CRUX.plus@gmail.com</div>
+          </div>
+          <div class="user-notification">
+           <div class="notify">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="currentColor">
+             <path d="M13.533 5.6h-.961a.894.894 0 01-.834-.57.906.906 0 01.197-.985l.675-.675a.466.466 0 000-.66l-1.32-1.32a.466.466 0 00-.66 0l-.676.677a.9.9 0 01-.994.191.906.906 0 01-.56-.837V.467A.467.467 0 007.933 0H6.067A.467.467 0 005.6.467v.961c0 .35-.199.68-.57.834a.902.902 0 01-.983-.195L3.37 1.39a.466.466 0 00-.66 0L1.39 2.71a.466.466 0 000 .66l.675.675c.25.25.343.63.193.995a.902.902 0 01-.834.56H.467A.467.467 0 000 6.067v1.866c0 .258.21.467.467.467h.961c.35 0 .683.202.834.57a.904.904 0 01-.197.984l-.675.676a.466.466 0 000 .66l1.32 1.32a.466.466 0 00.66 0l.68-.68a.894.894 0 01.994-.187.897.897 0 01.556.829v.961c0 .258.21.467.467.467h1.866c.258 0 .467-.21.467-.467v-.961c0-.35.202-.683.57-.834a.904.904 0 01.984.197l.676.675a.466.466 0 00.66 0l1.32-1.32a.466.466 0 000-.66l-.68-.68a.894.894 0 01-.187-.994.897.897 0 01.829-.556h.961c.258 0 .467-.21.467-.467V6.067a.467.467 0 00-.467-.467zM7 9.333C5.713 9.333 4.667 8.287 4.667 7S5.713 4.667 7 4.667 9.333 5.713 9.333 7 8.287 9.333 7 9.333z" /></svg>
+           </div>
+           <div class="notify alert">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+             <path d="M10.688 95.156C80.958 154.667 204.26 259.365 240.5 292.01c4.865 4.406 10.083 6.646 15.5 6.646 5.406 0 10.615-2.219 15.469-6.604 36.271-32.677 159.573-137.385 229.844-196.896 4.375-3.698 5.042-10.198 1.5-14.719C494.625 69.99 482.417 64 469.333 64H42.667c-13.083 0-25.292 5.99-33.479 16.438-3.542 4.52-2.875 11.02 1.5 14.718z" />
+             <path d="M505.813 127.406a10.618 10.618 0 00-11.375 1.542C416.51 195.01 317.052 279.688 285.76 307.885c-17.563 15.854-41.938 15.854-59.542-.021-33.354-30.052-145.042-125-208.656-178.917a10.674 10.674 0 00-11.375-1.542A10.674 10.674 0 000 137.083v268.25C0 428.865 19.135 448 42.667 448h426.667C492.865 448 512 428.865 512 405.333v-268.25a10.66 10.66 0 00-6.187-9.677z" /></svg>
+           </div>
+           <div class="notify alert">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+             <path d="M467.812 431.851l-36.629-61.056a181.363 181.363 0 01-25.856-93.312V224c0-67.52-45.056-124.629-106.667-143.04V42.667C298.66 19.136 279.524 0 255.993 0s-42.667 19.136-42.667 42.667V80.96C151.716 99.371 106.66 156.48 106.66 224v53.483c0 32.853-8.939 65.109-25.835 93.291L44.196 431.83a10.653 10.653 0 00-.128 10.752c1.899 3.349 5.419 5.419 9.259 5.419H458.66c3.84 0 7.381-2.069 9.28-5.397 1.899-3.329 1.835-7.468-.128-10.753zM188.815 469.333C200.847 494.464 226.319 512 255.993 512s55.147-17.536 67.179-42.667H188.815z" /></svg>
+           </div>
+           
+          </div>
+         </div>
+         <div class="msg msg-department Language" style="margin: 5px;border-radius: 10px;">
+            DOCUMENTATION
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 492 492">
+            </svg>
+           </div>
+         <div class="side-wrapper">
+          <div class="project-title">TEAM</div>
+          <div class="project-name">
+           <div class="project-department">DIVYA MEHTA</div>
+           <div class="project-department">DAVE</div>
+           <div class="project-department">GARRY</div>
+           <div class="project-department">SANYA</div>
+           <div class="project-department">SWIZA</div>
+          </div>
+         </div>
+         
+         <div class="side-wrapper">
+
+          <div class="team-member">
+           <img src="Divya.jpg" alt="" class="members">
+           <img src="" alt="" class="members">
+           <img src="" alt="" class="members">
+           <img src="" alt="" class="members">
+           <img src="" alt="" class="members">
+          </div>
+         </div>
+        </div>
+        <div class="main-area">
+         <div class="main-container team-con">
+          <div class="inbox-container anim-y-width">
+           <div class="inbox">
+            <div class="msg msg-department anim-y teams-dept">
+             ROLES
+             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 492 492">
+             </svg>
+            </div>
+            <div class="msg selected-bg anim-y-1">
+                <img src="Divya.jpg" class="members">
+                <input type="checkbox" name="msg" id="mail1" class="mail-choice" checked>
+                <div class="msg-content">
+                 <div class="msg-title">DIVYA MEHTA</div>
+                 <div class="msg-date">Java Script</div>
+                </div>
+               </div>
+               <div class="msg selected-bg anim-y-2">
+                <img src="dave.png" alt="" class="members mail-members">
+                <input type="checkbox" name="msg" id="mail1" class="mail-choice" checked>
+                <div class="msg-content">
+                 <div class="msg-title">DAVE</div>
+                 <div class="msg-date">HTML & CSS</div>
+                </div>
+               </div>
+               <div class="msg selected-bg anim-y-3">
+                <img src="garry.jpg" alt="" class="members mail-members">
+                <input type="checkbox" name="msg" id="mail1" class="mail-choice" checked>
+                <div class="msg-content">
+                 <div class="msg-title">GARRY</div>
+                 <div class="msg-date">HTML & CSS</div>
+                </div>
+               </div>
+               <div class="msg selected-bg anim-y-4">
+                <img src="sanya.jpg" alt="" class="members mail-members">
+                <input type="checkbox" name="msg" id="mail1" class="mail-choice" checked>
+                <div class="msg-content">
+                 <div class="msg-title">SANYA</div>
+                 <div class="msg-date">HTML</div>
+                </div>
+               </div>
+               <div class="msg selected-bg anim-y-5">
+                <img src="Swiza.png" alt="" class="members mail-members">
+                <input type="checkbox" name="msg" id="mail1" class="mail-choice" checked>
+                <div class="msg-content">
+                 <div class="msg-title">SWIZA</div>
+                 <div class="msg-date">CSS</div>
+                </div>
+               </div>
+           </div>
+          </div>
+          <div class="mail-detail anim-y-side">
+           <div class="mail-detail-header">
+            <div class="mail-detail-profile">
+              <a href="index.html"><img src="coderror2.png" alt="" class="members inbox-detail" /></a>
+             <div class="mail-detail-name">CRUX</div>
+            </div>
+           </div>
+           <div class="mail-contents">
+            <div class="mail-contents-subject">
+
+             <label for="mail20"></label>
+             <div class="mail-contents-title">DESCRIPTION</div>
+            </div>
+            
+             <div class="mail-inside">The CRUX-PLUS has been developed on HTML, CSS, JavaScript. The main objective of developing this website is to provide the user with a collection of 15 components in HTML i.e buttons, links et cetera. CRUX-PLUS provides an user friendly environment for you to learn without any additional software to download. Here the user will able to navigate through the desired component along with its respective code called code snippets. It has a compatible responsive web design customized with a lot of CSS. The other highlights of this code include easy to use navigation bar, collapsible and responsive side bar and various icons and widgets.</div>
+             <div class="mail-assign">
+              <div class="assignee">
+               <strong>Divya Mehta</strong> Animations & Components & JavaScript.
+               <span class="assign-date"></span>
+              </div>
+              <div class="assignee">
+               <strong>Dave</strong>Basic HTML Layout & Sidebar CSS.
+               <span class="assign-date"></span>
+              </div>
+              <div class="assignee">
+               <strong>Garry</strong> Login & Signup.
+               <span class="assign-date"></span>
+              </div>
+              <div class="assignee">
+                <strong>Sanya</strong>Basic HTML Layout.
+                <span class="assign-date"></span>
+               </div>
+               <div class="assignee">
+                <strong>Swiza</strong> Documentation & Components CSS.
+                <span class="assign-date"></span>
+               </div>
+             </div>
+             <div class="mail-contents-subject">
+              <div class="mail-contents-title">FUTURE PROSPECTS</div>
+             </div>
+             <div class="mail-inside">The traditional education system always follows an idea that the teacher is the supreme authority, and students should learn subjects from whatever the teacher delivers. CRUX-PLUS offers great future prospects with regards to learning and practising Web Development. CRUX-PLUS is a premium web hosting website with a bundle of pro-features, more of which will be upgraded soon.   </div>
+            </div>
+           </div>
+           </div>
+         </div>
+        </div>
+       </div>
+</body>
+</html>

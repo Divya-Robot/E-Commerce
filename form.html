@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center; margin: 0px;padding-bottom: 100px;">
+    <section class="form">
+        <div id="form1">
+          <h1>Sign-up</h1>
+
+
+          <form action="prac3login.html">
+          <h2><strong>Fill in the deatils</strong></h2>
+          
+          <table>
+          
+          <tr>
+          <td><span class="sp2"> FIRSTNAME : </span></td><td><input type="text" name="firstname" required /></td>
+          </tr>
+          
+          <tr>
+          <td><span class="sp2">LASTNAME:  </span></td><td><input type="text" name="lastname" required /></td>
+          </tr>
+          <br><br>
+          <tr>
+          <td><span id="check"></span></td>
+          
+          </tr>
+          <br><br>
+          
+          <tr>
+          <td><span class="sp2">E-MAIL:  </span></td>
+          <td><input id="email" type="text" name="email" onblur="ema();" required /></td>
+          <td><span id="emailspan" ></span>
+          </tr>
+          <tr>
+          <td><span class="sp2">PASSWORD : </span></td>
+          <td>
+          <input id="logininfo" type="password" name="password" onblur="passcheck();" required /></td>
+          <td><span id="pass"> </span></td>
+          </tr>
+          <tr>
+             <td>FATHER NAME :<br></td>
+             <td><span id="name"></span><input type="text" name="Name" id="input1" placeholder="Enter name" required><br></td>
+          </tr>
+          <tr>
+             <td>DOB :</td>
+             <td><span id="dob"></span><input type="date" name="dob" required><br></td>
+          </tr>
+          <tr>
+             <td>COURSE :</td>
+             <td><select name="COURSE" id="course" placeholder="Select your Subject">
+                 <option value="B.Tech">B.Tech</option>
+                 <option value="M.Tech">M.Tech</option>
+                 <option value="MBA">MBA</option>
+                 </select><br></td>
+          </tr>
+          <tr>
+             <td>GENDER :</td>
+             <td><span id="gender"></span>MALE<input type="radio" name="caste" required>FEMALE<input type="radio" name="caste" required><br></td>
+          </tr>
+          <tr>
+             <td>CASTE :</td>
+             <td><span id="caste"></span>ST<input type="checkbox" name="caste" required>SC<input type="checkbox" name="caste" required>OBC<input type="checkbox" name="caste" required>GEN<input type="checkbox" name="caste" required>OTHER<input type="checkbox" name="caste" required><br></td>
+          </tr>
+          <tr>
+             <td>ADDRESS :</td>
+             <td><span id="address"></span><textarea name="address" required></textarea></td>
+          </tr>
+          <tr>
+             <td>PINCODE :</td>
+             <td><span id="pincode"></span><input type="text" placeholder="Enter your PIN" required><br></td>
+          </tr>
+          <tr>
+             <td>CONTACT NO. :</td>
+             <td><span id="contact"></span><input type="number" placeholder="Enter your no." required><br></td>
+          </tr>
+          <tr>
+             <td>SUBJECT :</td>
+             <td><select name="SUBJECT" id="sub" placeholder="Select Subject">
+                 <option value="ADC">ADC</option>
+                 <option value="MPA">MPA</option>
+                 <option value="MA">MA</option>
+                 <option value="CE">CE</option>
+                 <option value="MPOB">MPOB</option>
+                 </select><br></td>
+          </tr>
+          <tr>
+             <td>HOBBIES</td>
+             <td><span id="hobbies"></span><textarea name="hobbies" required></textarea></td>
+          </tr>
+          </table>
+          <br><br><br><br>
+          
+          <input type="checkbox" name="offers" value="">
+             I would like to recieve E-mails about latest ongoing offers.
+         <br><br><br>
+          <button id="SUBMIT" type="submit" action="mailto:helenkant330000@gmail.com"><bold>SUBMIT</bold> </button>
+        <button id="RESET"  type="reset"><bold>RESET</bold> </button><br><br>
+          </form>
+        
+    </div>
+    <style>
+      
+            #form1{
+            background-image: linear-gradient(#8bf8e56e, #faaca899);
+            }
+
+
+            form{
+            text-align:center;
+            background-image:  linear-gradient(#141e30 , #243b55);
+
+              color:white;
+              margin-left: 200px;
+              margin-right: 200px;
+            }
+            table{
+              text-align:center;
+              margin-left:auto;
+              margin-right:auto;
+              font-family: Courier New;
+            }
+
+            h1{
+              font-size:70px;
+              background-image: linear-gradient(#ff7e5f , #feb47b);
+              text-align:center;
+              font-family:Blippo, fantasy;
+            margin-left:auto;
+              margin-right:auto;
+            }
+            td{
+              text-align: left;
+            }
+
+            span{
+              color:white;
+              font-weight:bold;
+            }
+            .submi
+            {
+            border:1px solid black;
+            }
+
+    </style>
+    </section>
+</body>
+
+</html>
